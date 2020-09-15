@@ -130,23 +130,24 @@ endif
 " }}}
 " Syntax: {{{
 if s:configuration.enable_italic
+  call sonokai#highlight('Keyword', s:palette.blue, s:palette.none, 'italic')
   call sonokai#highlight('Structure', s:palette.blue, s:palette.none, 'italic')
   call sonokai#highlight('StorageClass', s:palette.blue, s:palette.none, 'italic')
   call sonokai#highlight('Identifier', s:palette.orange, s:palette.none, 'italic')
   call sonokai#highlight('Constant', s:palette.orange, s:palette.none, 'italic')
 else
+  call sonokai#highlight('Keyword', s:palette.blue, s:palette.none)
   call sonokai#highlight('Structure', s:palette.blue, s:palette.none)
   call sonokai#highlight('StorageClass', s:palette.blue, s:palette.none)
   call sonokai#highlight('Identifier', s:palette.orange, s:palette.none)
   call sonokai#highlight('Constant', s:palette.orange, s:palette.none)
 endif
-call sonokai#highlight('Type', s:palette.red, s:palette.none)
 call sonokai#highlight('PreProc', s:palette.red, s:palette.none)
 call sonokai#highlight('PreCondit', s:palette.red, s:palette.none)
 call sonokai#highlight('Include', s:palette.red, s:palette.none)
-call sonokai#highlight('Keyword', s:palette.red, s:palette.none)
 call sonokai#highlight('Define', s:palette.red, s:palette.none)
-call sonokai#highlight('Typedef', s:palette.red, s:palette.none)
+call sonokai#highlight('Type', s:palette.orange, s:palette.none)
+call sonokai#highlight('Typedef', s:palette.orange, s:palette.none)
 call sonokai#highlight('Exception', s:palette.red, s:palette.none)
 call sonokai#highlight('Conditional', s:palette.red, s:palette.none)
 call sonokai#highlight('Repeat', s:palette.red, s:palette.none)
@@ -564,7 +565,7 @@ highlight! link agitAuthor Yellow
 " netrw {{{
 " https://www.vim.org/scripts/script.php?script_id=1075
 highlight! link netrwDir Green
-highlight! link netrwClassify Green
+highlight! link netrwClassify Grey
 highlight! link netrwLink Grey
 highlight! link netrwSymLink Fg
 highlight! link netrwExe Red
@@ -573,6 +574,8 @@ highlight! link netrwList Yellow
 highlight! link netrwHelpCmd Blue
 highlight! link netrwCmdSep Grey
 highlight! link netrwVersion Purple
+highlight! link netrwTreeBar Grey
+
 " }}}
 " }}}
 " Extended File Types: {{{
