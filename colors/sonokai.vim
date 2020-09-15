@@ -130,23 +130,22 @@ endif
 " }}}
 " Syntax: {{{
 if s:configuration.enable_italic
-  call sonokai#highlight('Keyword', s:palette.blue, s:palette.none, 'italic')
-  call sonokai#highlight('Structure', s:palette.blue, s:palette.none, 'italic')
+  call sonokai#highlight('Type', s:palette.blue, s:palette.none, 'italic')
   call sonokai#highlight('StorageClass', s:palette.blue, s:palette.none, 'italic')
   call sonokai#highlight('Identifier', s:palette.orange, s:palette.none, 'italic')
   call sonokai#highlight('Constant', s:palette.orange, s:palette.none, 'italic')
 else
+  call sonokai#highlight('Type', s:palette.blue, s:palette.none)
   call sonokai#highlight('Keyword', s:palette.blue, s:palette.none)
-  call sonokai#highlight('Structure', s:palette.blue, s:palette.none)
   call sonokai#highlight('StorageClass', s:palette.blue, s:palette.none)
   call sonokai#highlight('Identifier', s:palette.orange, s:palette.none)
   call sonokai#highlight('Constant', s:palette.orange, s:palette.none)
 endif
-call sonokai#highlight('PreProc', s:palette.red, s:palette.none)
-call sonokai#highlight('PreCondit', s:palette.red, s:palette.none)
-call sonokai#highlight('Include', s:palette.red, s:palette.none)
-call sonokai#highlight('Define', s:palette.red, s:palette.none)
-call sonokai#highlight('Type', s:palette.orange, s:palette.none)
+call sonokai#highlight('Structure', s:palette.blue, s:palette.none)
+call sonokai#highlight('PreProc', s:palette.blue, s:palette.none)
+call sonokai#highlight('PreCondit', s:palette.blue, s:palette.none)
+call sonokai#highlight('Include', s:palette.blue, s:palette.none)
+call sonokai#highlight('Define', s:palette.blue, s:palette.none)
 call sonokai#highlight('Typedef', s:palette.orange, s:palette.none)
 call sonokai#highlight('Exception', s:palette.red, s:palette.none)
 call sonokai#highlight('Conditional', s:palette.red, s:palette.none)
